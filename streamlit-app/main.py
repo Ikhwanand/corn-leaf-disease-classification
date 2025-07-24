@@ -72,7 +72,7 @@ CLASS_DESCRIPTIONS = {
 @st.cache_resource
 def load_onnx_model():
     """Load ONNX model with caching"""
-    model_path = '../models/corn_disease_model.onnx'
+    model_path = os.path.join('../models', 'corn_disease_model.onnx')
     
     if not os.path.exists(model_path):
         st.error(f"❌ Model file not found: {model_path}")
